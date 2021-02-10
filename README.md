@@ -1,18 +1,30 @@
 #include<stdio.h>
-int square(int a);
 main()
 {
-	int n[5]={1,2,3,4,5};
-	for(int i=0;i<5;i++)
+	int x[100];
+	int n,i,min,max;
+	printf("Program show max@min number");
+	printf("\nEnter N Number :");
+	scanf("%d",&n);
+	for(i=0;i<n;i++)
 	{
-		printf("%d\n",square(n[i]));
+		printf("x[%d] =",i+1);
+		scanf("%d",&x[i]);
 	}
-	
-}
-
-int square(int a)
-{
-	int r;
-	r=a*a;
-	return r;
+	printf("Minimum =%d\n",min);
+	max=x[0];
+	for(i=1;i<n;i++)
+	{
+		if(max<x[i])
+		max=x[i];
+		
+	}
+	printf("Maximum =%d",max);
+	min=x[0];
+	for(i=1;i<n;i++)
+	{
+		if(min>x[i])
+		min=x[i];
+		
+	}
 }
